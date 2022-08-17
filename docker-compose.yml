@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+
+  telegram-forwarder:
+    image: telegram-forwarder-bot
+    stdin_open: true
+    tty: true
+    restart: always
+    build:
+      context: .
+    
+    command: python3 bot.py
+
+
+    
